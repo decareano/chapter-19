@@ -3,8 +3,13 @@ import './styles/_App.scss'
 import Main from './components/Main/Main';
 import UserContext, { loggedIn } from './components/UserContext'
 
-function App() {
+fetch('./api')
+  .then(res => res.text())
+  .then(text => console.log(text))
 
+
+function App() {
+  
   const loginHook = useState(loggedIn)
 
   return (
